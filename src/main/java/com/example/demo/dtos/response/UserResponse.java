@@ -12,7 +12,6 @@ public class UserResponse {
     private String firstName;
     private String role;
     private TeamResponse team;
-    private String profilePhoto;
     private String lastName;
     private String email;
     private String phone;

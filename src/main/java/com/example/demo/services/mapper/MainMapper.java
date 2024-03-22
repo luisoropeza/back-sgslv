@@ -57,7 +57,6 @@ public class MainMapper {
         user.setPassword(passwordEncoder.encode(dto.getPassword().trim()));
         user.setRole(Role.valueOf(dto.getRole()));
         user.setTeam(team);
-        user.setProfilePhoto(dto.getProfilePhoto());
         user.setCreatedAt(LocalDateTime.now());
         userDetail.setFirstName(dto.getFirstName().trim());
         userDetail.setLastName(dto.getLastName().trim());
@@ -76,7 +75,6 @@ public class MainMapper {
                 user.setPassword(passwordEncoder.encode(dto.getPassword().trim()));
             }
         }
-        user.setProfilePhoto(dto.getProfilePhoto());
         userDetail.setFirstName(dto.getFirstName().trim());
         userDetail.setLastName(dto.getLastName().trim());
         userDetail.setEmail(dto.getEmail());
@@ -104,7 +102,6 @@ public class MainMapper {
         dto.setUsername(user.getUsername());
         dto.setRole(user.getRole().name());
         dto.setTeam(toTeamResponse(user.getTeam()));
-        dto.setProfilePhoto(user.getProfilePhoto());
         dto.setCreatedAt(user.getCreatedAt());
         dto.setFirstName(user.getUserDetail().getFirstName());
         dto.setLastName(user.getUserDetail().getLastName());

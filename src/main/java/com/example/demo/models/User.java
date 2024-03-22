@@ -37,8 +37,6 @@ public class User implements UserDetails {
     @Enumerated(EnumType.STRING)
     @Column(name = "role")
     private Role role;
-    @Column(name = "profile_photo")
-    private String profilePhoto;
     @Column(name = "created_at")
     private LocalDateTime createdAt;
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)

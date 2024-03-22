@@ -16,7 +16,6 @@ public class UpdateProfileDto {
     @Pattern(regexp = "^\\S*$", message = "Password can't contain spaces")
     @Pattern(regexp = "^(|.{5,})$", message = "Password can't be less 5 characters")
     private String password;
-    private String profilePhoto;
     @NotBlank(message = "First name is mandatory")
     private String firstName;
     @NotBlank(message = "Last name is mandatory")
